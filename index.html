@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="http://www.sex1sex.co.il/images/stories/bookmark.png"
+      type="image/x-icon"
+    />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -22,30 +27,35 @@
           <form id="new-todo-form">
             <h4>What's on your todo list?</h4>
 
-            <input type="text" name="content" id="content" placeholder="todo" />
+            <input
+              type="text"
+              name="content"
+              id="content"
+              placeholder="What needs to be done?"
+            />
 
             <h4>Pick a category</h4>
 
             <div class="options">
-              <label>
+              <label id="label1">
                 <input
                   type="radio"
                   name="category"
                   id="category1"
                   value="business"
                 />
-                <span class="bubble buisness"></span>
+                <span class="bubble businnes" id="span1"></span>
                 <div>Business</div>
               </label>
 
-              <label>
+              <label id="label2">
                 <input
                   type="radio"
                   name="category"
                   id="category2"
                   value="personal"
                 />
-                <span class="bubble personal"></span>
+                <span class="bubble personal" id="span2"></span>
                 <div>Personal</div>
               </label>
             </div>
@@ -61,7 +71,7 @@
             <!-- <div class="todo-item">
               <label>
                 <input type="checkbox" />
-                <span class="bubble buisness"></span>
+                <span class="bubble businnes"></span>
               </label>
 
               <div class="todo-content">

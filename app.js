@@ -67,7 +67,7 @@ function DisplayTodos() {
     if (todo.category == "personal") {
       span.classList.add("personal");
     } else {
-      span.classList.add("business");
+      span.classList.add("businnes");
     }
 
     content.innerHTML = `<input type="text" value="${todo.content}" readonly />`;
@@ -120,3 +120,21 @@ function DisplayTodos() {
     });
   });
 }
+
+const span1 = document.getElementById("span1");
+const label1 = document.getElementById("label1");
+label1.addEventListener("mouseover", () => {
+  span1.classList.add("hover");
+});
+label1.addEventListener("mouseout", () => {
+  span1.classList.remove("hover");
+});
+
+const span2 = document.getElementById("span2");
+const label2 = document.getElementById("label2");
+label2.addEventListener("mouseover", () => {
+  span2.classList.add("hover");
+});
+label2.addEventListener("mouseout", () => {
+  span2.classList.remove("hover");
+});

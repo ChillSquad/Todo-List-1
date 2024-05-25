@@ -21,6 +21,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  border: 1px solid var(--light);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  background-color: var(--light);
+}
+
 input:not([type="radio"]):not([type="checkbox"]),
 button {
   appearance: none;
@@ -31,17 +40,12 @@ button {
 }
 
 body {
-  background-color: var(--light);
   color: var(--dark);
 }
 
 section {
-  /* margin: 2rem 0; */
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  /* padding: 0 1.5rem; */
-  padding-left: 1.5rem;
-  padding-left: 1.5rem;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
 }
 
 h3 {
@@ -50,6 +54,7 @@ h3 {
   font-weight: 400;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  cursor: default;
 }
 
 h4 {
@@ -57,10 +62,12 @@ h4 {
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  cursor: default;
 }
 
 .greeting .title {
   display: flex;
+  cursor: default;
 }
 
 .greeting .title input {
@@ -122,6 +129,19 @@ input[type="checkbox"] {
   border-radius: 50%;
   border: 2px solid var(--businnes);
   box-shadow: var(--businnes-glow);
+  transition: all 0.2s ease-in-out;
+}
+
+.bubble:hover {
+  transform: scale(1.05);
+}
+
+.bubble.businnes.hover {
+  transform: scale(1.1);
+}
+
+.bubble.personal.hover {
+  transform: scale(1.1);
 }
 
 .bubble.personal {
@@ -168,10 +188,11 @@ input:checked ~ .bubble::after {
   border-radius: 0.5rem;
   box-shadow: var(--personal-glow);
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .create-todo input[type="submit"]:hover {
+  transform: translateY(-3px);
   opacity: 0.75;
 }
 
